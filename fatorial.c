@@ -4,7 +4,7 @@ int fatorial(int n){
   if(!n){
     return 1;
   }
-  return n*fatorial(n-1);
+  return n*fatorial(n-1); 
 }
 
 int potencia(int b, int e){

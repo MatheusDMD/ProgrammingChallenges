@@ -21,6 +21,7 @@ int optimized_bubble_sort(int v[], int size) {
       return n_iterations;
     }
   }
+  return n_iterations;
 }
 
 int bubble_sort(int v[], int n) {

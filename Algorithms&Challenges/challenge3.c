@@ -8,7 +8,7 @@ void selection_sort(int vec[], int size){
   for(int j = 0; j < size; j++) {
     /*O for externo indica a posição em que os valores desordenados estão.*/
     int temp = vec[j];
-    int temp_pos = j;
+    temp_pos = j;
     /*Define também uma temp para o valor do último número desordenado e sua posição,
       referência base como o menor número até o momento*/
     for(int i = j; i < size; i++) {

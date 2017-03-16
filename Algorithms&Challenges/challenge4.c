@@ -4,7 +4,7 @@
 #define MAX_NUMBER 100
 
 void insertion_sort(int vec[], int size){
-  int temp,i;
+  int temp;
   for (int i = 1; i <= size - 1; i++) {
     temp = vec[i];
     for (int j = i-1; j >= 0; j--) {

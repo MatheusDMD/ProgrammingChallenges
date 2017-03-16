@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-void main(){
+int main(void){
   int number_of_numbers;
   int sum;
-  int media;
   int n;
 
   printf("%s\n", "Digite o numero de numeros que deseja obter a media:");
