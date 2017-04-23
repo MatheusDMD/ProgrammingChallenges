@@ -1,0 +1,6 @@
+- Study Richard Delorme's end game solver (and maybe also its references).
+
+- Lookup edge pattern from config. index rather than searching
+- Use potiential mobility to replace simple disc counting (maybe)
+- Add no-corner stable edge pattern (XOOOOOOX).
+
