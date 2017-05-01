@@ -34,6 +34,11 @@ int main(int argc, char const *argv[]) {
     std::getline(file, line);
     std::istringstream iss(line);
     iss >> from >> to;
+    if(from > to){
+      int temp = from;
+      from = to;
+      to = temp;
+    }
     link *lk = new link(from, to);
     node_list[from]->add_link(lk);
     m--;
