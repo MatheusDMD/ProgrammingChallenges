@@ -1,0 +1,13 @@
+Minimum Number of Jumps
+Rod Cutting
+Building Bridges
+Boolean Knapsack
+Edit Distance
+Dice Throw
+Coin Change
+Matrix Chain Multiplication
+Minimum Sum Partition
+Word Break
+Boolean Parenthesization
+Longest Common Subsequence
+Longest Palindromic Subsequence
