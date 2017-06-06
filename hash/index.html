@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aula sobre Minimum Number of Jumps">
+  <title>Minimum Number of Jumps</title>
+  <link rel="stylesheet" href="./Marotzke/css">
+  <link rel="stylesheet" href="./Marotzke/bootstrap.min.css">
+  <link rel="stylesheet" href="./Marotzke/style.css">
+  <link rel="stylesheet" href="./Marotzke/style(1).css">
+  <link rel="stylesheet" href="./Marotzke/style(2).css">
+  <link rel="stylesheet" href="./Marotzke/mbr-additional.css" type="text/css">
+
+
+<style type="text/css" id="jarallax-clip-0">#jarallax-container-0 {
+   clip: rect(0px 1903px 378px 0);
+   clip: rect(0px, 1903px, 378px, 0);
+}</style></head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-PFK425"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script type="text/javascript" async="" src="./Marotzke/conversion_async.js.download"></script><script type="text/javascript" async="" src="./Marotzke/analytics.js.download"></script><script async="" src="./Marotzke/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PFK425');</script>
+<!-- End Google Tag Manager -->
+
+<section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-59">
+    <div class="mbr-navbar__section mbr-section">
+        <div class="mbr-section__container container">
+            <div class="mbr-navbar__container">
+                <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
+                    <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
+                        <span class="mbr-brand__logo"><a href="http://matheusdmd.github.io/"><img class="mbr-navbar__brand-img mbr-brand__img" src="https://scontent.fcgh9-1.fna.fbcdn.net/v/t1.0-9/15873469_1580603628633544_4839257865611919178_n.jpg?oh=1754a797783e66c3cf0ca4f384d29a53&oe=59B20C00" alt="Marotzke"></a></span>
+                        <span class="mbr-brand__name"><a class="mbr-brand__name text-white" href="http://matheusdmd.github.io/">Marotzke</a></span>
+                    </span>
+                </div>
+                <div class="mbr-navbar__hamburger mbr-hamburger text-white mbr-added"><span class="mbr-hamburger__line"></span></div>
+                <div class="mbr-navbar__column mbr-navbar__menu">
+                    <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
+                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#header3-78">1. MNJ</a></li>
+                          <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#header3-94">2. CASE</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#resol">3. RESOLUÇÂO</a></li></ul></div>
+                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="#code">CODE</a></li></ul></div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-77" style="background-image: none; position: relative; background-attachment: scroll; background-size: auto;"><div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transition: transform linear -1ms, -webkit-transform linear -1ms; visibility: hidden; z-index: -100;"><div style="background-position: 50% 50%; background-repeat: no-repeat; background-color: red; position: fixed; top: 0px; left: 0px; width: 1903px; height: 901px; overflow: hidden; pointer-events: none; transition: transform linear -1ms, -webkit-transform linear -1ms; background-size: 1903px 1273.62px; visibility: visible; transform: translate3d(0px, 0px, 0px);"></div></div>
+    <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>MINIMUM NUMBER OF JUMPS</h3>
+                        <div><p>ABORDAGEM UTILIZANDO PROGRAMAÇÃO DINÂMICA<br></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="header3-78">
+    <div class="mbr-section__container container mbr-section__container--first">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text">MINIMUM NUMBER OF JUMPS&nbsp;</h3>
+                <p class="mbr-header__subtext">Descrição do problema</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-79">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2"><p>Dada uma sequência de número inteiros, em que cada número representa a capacidade máxima de posições que podem ser “saltadas” (Jump) a partir daquele elemento da sequência. Qual o menor número de saltos que devem ser executados? A fim de chegar ao último número da sequência partindo do primeiro. Lembrando que se alguma posição contiver o valor 0, não é possível executar salto algum partindo daquela posição.
+              &nbsp;</p><blockquote><em>Um caso exemplo pode ser ilustrado a partir desta sequência de 10 números inteiros:&nbsp;</em></blockquote>
+              <div><img class="mbr-figure__img" src="./Capture.png"></div>
+              <blockquote><em>As valores associados a cada posição revelam quantas casas podem ser saltadas a partir de cada um deles. No caso do primeiro elemento, seu alcance se estende à ambos o segundo e terceiro elementos.&nbsp;</em></blockquote>
+              <div><img class="mbr-figure__img" src="./Capture2.png"></div>
+              <blockquote><em>Já no caso do segundo elemento, seu alcance se estende por  3 outros elementos: terceiro, quarto e quinto.&nbsp;</em></blockquote>
+              <div><img class="mbr-figure__img" src="./Capture3.png"></div>
+              <blockquote><em>A mesma pergunta se mantém. Qual o número mínimo de saltos para alcançar o elemento final? A resposta para este exemplo é <strong>4</strong>.&nbsp;</em></blockquote>
+              <div><img class="mbr-figure__img" src="./Capture4.png"></div>
+              <blockquote><em>Como pode ser observado no caso acima, nem sempre o melhor caminho é sempre saltar até a maior distância viável a partir daquele elemento, mas analisar caso a caso para entender o salto ótimo. Existem diversas formas de resolver este problema, entender as diferentes abordagens permite compreender suas otimizações associadas. Para a resolução deste problema este documento discorre sobre sua implementação utilizando programação dinâmica.&nbsp;</em></blockquote></div>
+
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="header3-94">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text"><br><br>CASE</h3>
+                <p class="mbr-header__subtext">InsperTrans - Case</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mbr-section" id="image2-83">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+
+                    <div><img class="mbr-figure__img" src="./hash.jpg"></div>
+                    <figcaption class="mbr-figure__caption">
+                        <small class="mbr-figure__caption-small">InsperTrans</small>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-84">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+              <p>
+                A empresa de transporte <strong>InsperTrans</strong> está desenvolvendo uma plataforma online para auxiliar seus usuários com a utilização de seu sistema de transporte.
+              </p>
+                <p>
+                  As linhas da InsperTrans possuem uma peculiaridade. Para otimizar as transições rápidas nas paradas, os <strong>ônibus somente embarcam passageiros em seus pontos iniciais.</strong> Garantindo que todos os passageiros sejam embarcados e viagem com conforto. A cada entrada em um ônibus o usuário deve <strong>utilizar um novo ticket</strong>.
+                </p>
+                <p>
+                  O objetivo de sua equipe é desenvolver um algoritmo que entrega ao usuário <strong>o número de tickets</strong> que devem ser comprados para ir de um ponto até outro. Bem como os pontos os quais o usuário deve trocar de ônibus.
+                </p>
+              </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="image2-79">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+
+                    <div><img class="mbr-figure__img" src="./hash2.jpg"></div>
+                    <figcaption class="mbr-figure__caption">
+                        <small class="mbr-figure__caption-small">Regras</small>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mbr-section" id="content1-84">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2"><p>Vestibulum id nisl eu ipsum ultrices sodales. Donec non nibh at diam porta porttitor. Aenean dignissim porttitor aliquam. Etiam a sapien quis velit rhoncus pulvinar. Nunc dictum pretium lacus, nec convallis mauris vestibulum sit amet. Nam pretium tristique mauris in tempor. Phasellus consequat ipsum quis libero tristique ornare. Nulla ante libero, viverra at eros eu, fermentum rutrum lacus.&nbsp;</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="image2-79">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+
+                    <div><img class="mbr-figure__img" src="./hash3.jpg"></div>
+                    <figcaption class="mbr-figure__caption">
+                        <small class="mbr-figure__caption-small">Resultados</small>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="resol">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text"><br><br>RESOLUÇÂO</h3>
+                <p class="mbr-header__subtext">Abordagem Dinâmica</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-92">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+              <p>
+                A abordagem utilizando programação dinâmica (Dynamic Programming - DP) consiste da utilização de artifícios programacionais, que visam o incremento na eficiência de execução. Tratando das duas premissas constatadas como fatores maléficos à eficiência do algoritmo recursivo.
+              </p>
+              <p>
+                O problema será resolvido através da utilização técnicas de memoização. Basicamente o código armazenará os subproblemas sendo resolvidos em uma estrutura análoga à um cache, permitindo que o cálculo não tenha que ser feito novamente repetidas vezes. Associado a essa manobra, o programa utilizando DP faz uso de uma estrutura de subproblemas mais otimizada. Garantindo complexidade quadrática no pior caso O(n^2).
+              </p>
+</p></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Lightbox -->
+    <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery2-90">
+        <div class="modal-dialog" style="width: 1121px; top: 0px;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ol class="carousel-indicators">
+                        <li data-app-prevent-settings="" data-target="#lb-gallery2-90" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#lb-gallery2-90" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#lb-gallery2-90" data-slide-to="2"></li><li data-app-prevent-settings="" data-target="#lb-gallery2-90" class=" active" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <img alt="" src="./Marotzke/phone-1052021-1920-1920x1440-16.jpg">
+                        </div><div class="item">
+                            <img alt="" src="./Marotzke/phone-1052022-1920-1920x1440-95.jpg">
+                        </div><div class="item">
+                            <img alt="" src="./Marotzke/phone-1052023-1920-1920x1440-26.jpg">
+                        </div><div class="item active">
+                            <img alt="" src="./Marotzke/phone-1052021-1920-1920x1440-38.jpg">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" role="button" data-slide="prev" href="https://mobirise.com/bootstrap-template/blog.html#lb-gallery2-90">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" role="button" data-slide="next" href="https://mobirise.com/bootstrap-template/blog.html#lb-gallery2-90">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <a class="close" href="https://mobirise.com/bootstrap-template/blog.html#" role="button" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        <span class="sr-only">Close</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-92">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+              <img src="http://i.makeagif.com/media/6-05-2017/CXmmPa.gif" alt="" style="height: 350px; width: 550px;">
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="code">
+    <div class="mbr-section__container container mbr-section__container--middle">
+        <div class="mbr-header mbr-header--wysiwyg row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h3 class="mbr-header__text"><br><br>CODE</h3>
+                <p class="mbr-header__subtext">C++ e Python</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-87">
+    <div class="mbr-section__container container mbr-section__container--last">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+              <p>
+                C++:
+              </p>
+              <pre>
+#include < iostream >
+#include < climits >
+#include < algorithm >    // std::min
+
+
+int minJumps(int arr[], int n)
+{
+    int *jumps = new int[n];  // jumps[n-1] will hold the result
+    int i, j;
+
+    if (n == 0 || arr[0] == 0)
+        return INT_MAX;
+
+    jumps[0] = 0;
+
+    // Find the minimum number of jumps to reach arr[i]
+    // from arr[0], and assign this value to jumps[i]
+    for (i = 1; i < n; i++)
+    {
+        jumps[i] = INT_MAX;
+        for (j = 0; j < i; j++)
+        {
+            if (i <= j + arr[j] && jumps[j] != INT_MAX)
+            {
+                 jumps[i] = std::min(jumps[i], jumps[j] + 1);
+                 break;
+            }
+        }
+    }
+    return jumps[n-1];
+}
+
+
+// Driver program to test above function
+int main()
+{
+    int arr[] = {1, 2, 2, 0, 12, 1, 0, 9};
+    int size = sizeof(arr)/sizeof(int);
+    std::cout << ("Minimum number of jumps to reach end is %d \n", minJumps(arr,size));
+    return 0;
+}
+              </pre></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section" id="content1-87">
+    <div class="mbr-section__container container mbr-section__container--last">
+        <div class="row">
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+              <p>
+                Python:
+              </p>
+              <pre>
+  def minJumps(linha_de_onibus):
+      if len(linha_de_onibus) == 0 or linha_de_onibus[0] == 0:
+          return None
+
+      MNJ = [None]*len(linha_de_onibus)
+      MNJ[0] = 0;
+
+      for i in range(1,len(linha_de_onibus)):
+          for j in range(i):
+              if i <= j + linha_de_onibus[j]:
+                  if MNJ[i] != None:
+                      MNJ[i] = min(MNJ[i], MNJ[j] + 1)
+                  else:
+                      MNJ[i] = MNJ[j] + 1
+                      break
+
+      return MNJ[-1]
+
+  result = minJumps([2,2,3,0,2,1,3,1,0,1,0])
+  print(result)
+              </pre></div>
+        </div>
+    </div>
+</section>
+
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-76" style="background-color: rgb(68, 68, 68);">
+
+    <div class="mbr-section__container container">
+        <div class="mbr-footer mbr-footer--wysiwyg row">
+            <div class="col-sm-12">
+                <p class="mbr-footer__copyright"></p><p>Copyright (c) 2016 Company Name. <a href="https://mobirise.com/license.txt" class="text-gray">License</a></p><p></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="./Marotzke/jquery.min.js.download"></script>
+  <script src="./Marotzke/bootstrap.min.js.download"></script>
+  <script src="./Marotzke/SmoothScroll.js.download"></script>
+  <script src="./Marotzke/jarallax.js.download"></script>
+  <script src="./Marotzke/bootstrap-carousel-swipe.js.download"></script>
+  <script src="./Marotzke/masonry.pkgd.min.js.download"></script>
+  <script src="./Marotzke/imagesloaded.pkgd.min.js.download"></script>
+  <script src="./Marotzke/script.js.download"></script>
+  <script src="./Marotzke/script.js(1).download"></script>
+
+
+
+</body></html>
