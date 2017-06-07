@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white mbr-added"><span class="mbr-hamburger__line"></span></div>
                 <div class="mbr-navbar__column mbr-navbar__menu">
                     <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#header3-78">1. MNJ</a></li>
+                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#header3-78">1. DESCRIÇÃO</a></li>
                           <li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#header3-94">2. CASE</a></li><li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="#resol">3. RESOLUÇÂO</a></li></ul></div>
                         <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="#code">CODE</a></li></ul></div>
                     </nav>
@@ -81,16 +81,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="mbr-section" id="content1-79">
     <div class="mbr-section__container container mbr-section__container--middle">
         <div class="row">
-            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2"><p>Dada uma sequência de número inteiros, em que cada número representa a capacidade máxima de posições que podem ser “saltadas” (Jump) a partir daquele elemento da sequência. Qual o menor número de saltos que devem ser executados? A fim de chegar ao último número da sequência partindo do primeiro. Lembrando que se alguma posição contiver o valor 0, não é possível executar salto algum partindo daquela posição.
+            <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2"><p>Dada uma sequência de números inteiros, em que cada número representa a capacidade máxima de posições que podem ser “saltadas” (Jump) a partir daquele elemento da sequência, questiona-se: Qual o menor número de saltos que devem ser executados? A fim de chegar ao último número da sequência partindo do primeiro. Uma observação importante é que se alguma posição contiver o valor 0, não é possível executar salto algum partindo daquela posição.
               &nbsp;</p><blockquote><em>Um caso exemplo pode ser ilustrado a partir desta sequência de 10 números inteiros:&nbsp;</em></blockquote>
               <div><img class="mbr-figure__img" src="./Marotzke/Capture.PNG"></div>
-              <blockquote><em>As valores associados a cada posição revelam quantas casas podem ser saltadas a partir de cada um deles. No caso do primeiro elemento, seu alcance se estende à ambos o segundo e terceiro elementos.&nbsp;</em></blockquote>
+              <blockquote><em>As valores associados a cada posição revelam quantas casas podem ser saltadas a partir de cada um deles. No caso do primeiro elemento, seu alcance se estende a ambos o segundo e terceiro elementos.&nbsp;</em></blockquote>
               <div><img class="mbr-figure__img" src="./Marotzke/Capture2.PNG"></div>
               <blockquote><em>Já no caso do segundo elemento, seu alcance se estende por  3 outros elementos: terceiro, quarto e quinto.&nbsp;</em></blockquote>
               <div><img class="mbr-figure__img" src="./Marotzke/Capture3.PNG"></div>
               <blockquote><em>A mesma pergunta se mantém. Qual o número mínimo de saltos para alcançar o elemento final? A resposta para este exemplo é <strong>4</strong>.&nbsp;</em></blockquote>
               <div><img class="mbr-figure__img" src="./Marotzke/Capture4.PNG"></div>
-              <blockquote><em>Como pode ser observado no caso acima, nem sempre o melhor caminho é sempre saltar até a maior distância viável a partir daquele elemento, mas analisar caso a caso para entender o salto ótimo. Existem diversas formas de resolver este problema, entender as diferentes abordagens permite compreender suas otimizações associadas. Para a resolução deste problema este documento discorre sobre sua implementação utilizando programação dinâmica.&nbsp;</em></blockquote></div>
+              <blockquote><em>Como pode ser observado no caso acima, nem sempre o melhor caminho é sempre saltar até a maior distância viável a partir daquele elemento, mas analisar caso a caso para entender o salto ótimo. Existem diversas formas de resolver este problema e entender as diferentes abordagens permite compreender suas otimizações associadas. Para a resolução deste problema este documento discorre sobre sua implementação utilizando programação dinâmica.&nbsp;</em></blockquote></div>
 
         </div>
     </div>
@@ -132,10 +132,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 A empresa de transporte <strong>InsperTrans</strong> está desenvolvendo uma plataforma online para auxiliar seus usuários com a utilização de seu sistema de transporte.
               </p>
                 <p>
-                  As linhas da InsperTrans possuem uma peculiaridade. Para otimizar as transições rápidas nas paradas, os <strong>ônibus somente embarcam passageiros em seus pontos iniciais.</strong> Garantindo que todos os passageiros sejam embarcados e viagem com conforto. A cada entrada em um ônibus o usuário deve <strong>utilizar um novo ticket</strong>.
+                  As linhas da InsperTrans possuem uma peculiaridade. Para otimizar as transições rápidas nas paradas, os <strong>ônibus somente embarcam passageiros em seus pontos iniciais.</strong> Garantindo que todos os passageiros sejam embarcados e viajem com conforto. A cada entrada em um ônibus o usuário deve <strong>utilizar um novo ticket</strong>.
                 </p>
                 <p>
-                  O objetivo de sua equipe é desenvolver um algoritmo que entrega ao usuário <strong>o número de tickets</strong> que devem ser comprados para ir de um ponto até outro. Bem como os pontos os quais o usuário deve trocar de ônibus.
+                  O objetivo de sua equipe é desenvolver um algoritmo que entrega ao usuário <strong>o número de tickets</strong> que devem ser comprados para ir de um ponto até outro, bem como os pontos os quais o usuário deve trocar de ônibus.
                 </p>
               </div>
         </div>
@@ -199,10 +199,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="row">
             <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
               <p>
-                A abordagem utilizando programação dinâmica (Dynamic Programming - DP) consiste da utilização de artifícios programacionais, que visam o incremento na eficiência de execução. Tratando das duas premissas constatadas como fatores maléficos à eficiência do algoritmo recursivo.
+                A abordagem utilizando programação dinâmica (Dynamic Programming - DP) consiste da utilização de artifícios programacionais, que visam o incremento na eficiência de execução. Tratando das o modelo de multiplas chamadas para o mesmo fator e o armazenamento infeciênte da solução como fatores maléficos à eficiência do algoritmo recursivo.
               </p>
               <p>
-                O problema será resolvido através da utilização técnicas de memoização. Basicamente o código armazenará os subproblemas sendo resolvidos em uma estrutura análoga à um cache, permitindo que o cálculo não tenha que ser feito novamente repetidas vezes. Associado a essa manobra, o programa utilizando DP faz uso de uma estrutura de subproblemas mais otimizada. Garantindo complexidade quadrática no pior caso O(n^2).
+                O problema será resolvido através da utilização de técnicas de memoização. Basicamente o código armazenará os subproblemas sendo resolvidos em uma estrutura análoga a um cache, permitindo que o cálculo não tenha que ser feito novamente repetidas vezes. Associado a essa manobra, o programa utilizando DP faz uso de uma estrutura de subproblemas mais otimizada, dessa forma garantindo complexidade quadrática no pior caso O(n^2).
               </p>
 </p></div>
         </div>
@@ -283,47 +283,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 C++:
               </p>
               <pre>
-#include < iostream >
-#include < climits >
-#include < algorithm >    // std::min
-
-
-int minJumps(int arr[], int n)
-{
-    int *jumps = new int[n];  // jumps[n-1] will hold the result
-    int i, j;
-
-    if (n == 0 || arr[0] == 0)
-        return INT_MAX;
-
-    jumps[0] = 0;
-
-    // Find the minimum number of jumps to reach arr[i]
-    // from arr[0], and assign this value to jumps[i]
-    for (i = 1; i < n; i++)
-    {
-        jumps[i] = INT_MAX;
-        for (j = 0; j < i; j++)
-        {
-            if (i <= j + arr[j] && jumps[j] != INT_MAX)
-            {
-                 jumps[i] = std::min(jumps[i], jumps[j] + 1);
-                 break;
-            }
-        }
-    }
-    return jumps[n-1];
-}
-
-
-// Driver program to test above function
-int main()
-{
-    int arr[] = {1, 2, 2, 0, 12, 1, 0, 9};
-    int size = sizeof(arr)/sizeof(int);
-    std::cout << ("Minimum number of jumps to reach end is %d \n", minJumps(arr,size));
-    return 0;
-}
+1  #include < iostream >
+2  #include < climits >
+3  #include < algorithm >    // std::min
+4
+5
+6  int minJumps(int arr[], int n)
+7  {
+8     int *jumps = new int[n];  // jumps[n-1] will hold the result
+9     int i, j;
+10
+11    if (n == 0 || arr[0] == 0)
+12       return INT_MAX;
+13
+14    jumps[0] = 0;
+15
+16    // Find the minimum number of jumps to reach arr[i]
+17    // from arr[0], and assign this value to jumps[i]
+18    for (i = 1; i < n; i++)
+19    {
+20        jumps[i] = INT_MAX;
+21        for (j = 0; j < i; j++)
+22        {
+23            if (i <= j + arr[j] && jumps[j] != INT_MAX)
+24            {
+25                 jumps[i] = std::min(jumps[i], jumps[j] + 1);
+26                 break;
+27            }
+28        }
+29    }
+30    return jumps[n-1];
+31 }
+32
+33
+34 // Driver program to test above function
+35 int main()
+36 {
+37    int arr[] = {1, 2, 2, 0, 12, 1, 0, 9};
+38    int size = sizeof(arr)/sizeof(int);
+39    std::cout << ("Minimum number of jumps to reach end is %d \n", minJumps(arr,size));
+40    return 0;
+41 }
               </pre></div>
         </div>
     </div>
@@ -337,26 +337,26 @@ int main()
                 Python:
               </p>
               <pre>
-  def minJumps(linha_de_onibus):
-      if len(linha_de_onibus) == 0 or linha_de_onibus[0] == 0:
-          return None
-
-      MNJ = [None]*len(linha_de_onibus)
-      MNJ[0] = 0;
-
-      for i in range(1,len(linha_de_onibus)):
-          for j in range(i):
-              if i <= j + linha_de_onibus[j]:
-                  if MNJ[i] != None:
-                      MNJ[i] = min(MNJ[i], MNJ[j] + 1)
-                  else:
-                      MNJ[i] = MNJ[j] + 1
-                      break
-
-      return MNJ[-1]
-
-  result = minJumps([2,2,3,0,2,1,3,1,0,1,0])
-  print(result)
+1  def minJumps(linha_de_onibus):
+2      if len(linha_de_onibus) == 0 or linha_de_onibus[0] == 0:
+3          return None
+4
+5      MNJ = [None]*len(linha_de_onibus)
+6      MNJ[0] = 0;
+7
+8      for i in range(1,len(linha_de_onibus)):
+9          for j in range(i):
+10              if i <= j + linha_de_onibus[j]:
+11                  if MNJ[i] != None:
+12                      MNJ[i] = min(MNJ[i], MNJ[j] + 1)
+13                  else:
+14                      MNJ[i] = MNJ[j] + 1
+15                      break
+16
+17      return MNJ[-1]
+18
+19   result = minJumps([2,2,3,0,2,1,3,1,0,1,0])
+20  print(result)
               </pre></div>
         </div>
     </div>
