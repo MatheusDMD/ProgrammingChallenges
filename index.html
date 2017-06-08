@@ -204,7 +204,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p>
                 O problema será resolvido através da utilização de técnicas de memoização. Basicamente o código armazenará os subproblemas sendo resolvidos em uma estrutura análoga a um cache, permitindo que o cálculo não tenha que ser feito novamente repetidas vezes. Associado a essa manobra, o programa utilizando DP faz uso de uma estrutura de subproblemas mais otimizada, dessa forma garantindo complexidade quadrática no pior caso O(n^2).
               </p>
-</p></div>
+              <p>
+                O que o algoritmo faz é guardar os valores visando não gerar redundância. O processo utilza um array/lista auxiliar para a anotação do fator de MNJ até o indice de análise, ou seja, sabemos o valor do MNJ para a posição de índice 1. 0 -> 1 é a única opção. Portanto, só pode ser 1. Assim, podemos concluir que o MNJ até a a posição de índice 2, deve ser o mínimo entre as opções possíveis. 0 -> 2 ou 1 -> 2 (Sabendo que 0 -> 2 é uma opção válida), apenas deve-se avaliar 0 MNJ até o ponto somado de 1 (já que um novo salto está sendo executado). Em uma comparação 0 -> 2 é o salto que levaria à contagem correta de MNJ do item de posição 2, MNJ: 1.
+              </p>
+              <p>
+                Este conceito representa a utilização dos subproblemas unidos, uma vez que o problema maior: MNJ(0 -> n), é subdividido em MNJ(0 -> 0+1), (0 -> 0+2), (0 -> 0+(n-1)). Sendo unidos ao calcular o item seguinte a sequência.
+              </p>
+              <p>
+                Isso pode ser ilustrado pela animação a seguir:
+              </p>
+            </div>
         </div>
     </div>
 </section>
